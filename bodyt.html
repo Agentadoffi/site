@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulaire interactif pour une enquête RH">
+    <title>Enquête RH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="csse.css">
+</head>
+
+<body>
+    <header>
+        <h1>Enquête RH</h1>
+        <p>Votre expérience est la force de notre organisation.</p>
+    </header>
+
+    <main>
+        <section class="progress-bar-container" aria-hidden="true">
+            <div id="progress-bar"></div>
+        </section>
+
+        <form id="survey-form" class="form-container">
+            <!-- Page 1: Accueil et Intégration -->
+            <fieldset class="form-section">
+                <legend>Accueil et Intégration</legend>
+
+                <label for="accueil">Vous a-t-on accueilli le 1er jour ? Si oui, par qui ?</label>
+                <textarea id="accueil" name="accueil" rows="3" placeholder="Exemple : Manager, RH, etc."></textarea>
+
+                <label for="tuilage">Avez-vous bénéficié d'un tuilage ?</label>
+                <select id="tuilage" name="tuilage">
+                    <option value="">Choisissez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+
+                <label for="valisette">Vous a-t-on remis la "valisette" du nouvel arrivant ?</label>
+                <select id="valisette" name="valisette">
+                    <option value="">Choisissez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+
+                <label for="suggestions-integration">Vos suggestions pour améliorer cette phase :</label>
+                <textarea id="suggestions-integration" name="suggestions-integration" rows="3" placeholder="Vos suggestions..."></textarea>
+            </fieldset>
+
+            <!-- Page 2: Contrat et Conditions de Travail -->
+            <fieldset class="form-section hidden">
+                <legend>Contrat et Conditions de Travail</legend>
+
+                <label for="contrat-signature">À quel moment avez-vous signé le contrat ?</label>
+                <input type="text" id="contrat-signature" name="contrat-signature" placeholder="Exemple : avant la prise de poste">
+
+                <label for="poste">Quel est l'intitulé du poste ? Quelles sont vos missions ?</label>
+                <textarea id="poste" name="poste" rows="3" placeholder="Intitulé du poste, description des missions..."></textarea>
+
+                <label for="statut-cadre">Êtes-vous sous statut cadre ?</label>
+                <select id="statut-cadre" name="statut-cadre">
+                    <option value="">Choisissez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+
+                <label for="contrat-heures">Quel est le nombre d'heures par semaine ?</label>
+                <input type="number" id="contrat-heures" name="contrat-heures" placeholder="Exemple : 35">
+            </fieldset>
+
+            <!-- Page 3: Rémunération -->
+            <fieldset class="form-section hidden">
+                <legend>Rémunération</legend>
+
+                <label for="remuneration-embauche">Niveau de rémunération proposé à l'embauche :</label>
+                <input type="text" id="remuneration-embauche" name="remuneration-embauche" placeholder="Montant en €">
+
+                <label for="remuneration-actuelle">Rémunération actuelle :</label>
+                <input type="text" id="remuneration-actuelle" name="remuneration-actuelle" placeholder="Montant en €">
+
+                <label for="treizieme-mois">Bénéficiez-vous d'un treizième mois ?</label>
+                <select id="treizieme-mois" name="treizieme-mois">
+                    <option value="">Choisissez une option</option>
+                    <option value="oui">Oui</option>
+                    <option value="non">Non</option>
+                </select>
+            </fieldset>
+
+            <!-- Navigation Buttons -->
+            <div class="form-navigation">
+                <button type="button" id="prev-button" class="btn hidden">Précédent</button>
+                <button type="button" id="next-button" class="btn">Suivant</button>
+                <button type="submit" id="submit-button" class="btn hidden">Envoyer</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <button class="theme-toggle">🌙 Mode sombre</button>
+        <p id="footer-text">&copy; 2024 Enquête RH. Tous droits réservés.</p>
+    </footer>
+
+    <script src="dkmod.js"></script>
+</body>
+
+</html>

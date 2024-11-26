@@ -1,0 +1,199 @@
+/* Styles globaux */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+header {
+    background-color: #AE5832;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+/* Formulaire */
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container.dark {
+    background-color: #444;
+}
+
+/* Sections du formulaire */
+.form-section {
+    display: none;
+    margin-bottom: 2rem;
+}
+
+.form-section:not(.hidden) {
+    display: block;
+}
+
+textarea, input, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.hidden {
+    display: none;
+}
+
+.theme-toggle {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+    color: #4CAF50;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
+    position: relative;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+#footer-text {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* Progress bar */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+#progress-bar {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0;
+    border-radius: 4px;
+}
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .form-section {
+        margin-bottom: 1.5rem;
+    }
+
+    button {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+
+    #footer-text {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .form-container {
+        padding: 1rem;
+    }
+
+    .form-section {
+        margin-bottom: 1.2rem;
+    }
+
+    button {
+        padding: 0.6rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.7rem;
+    }
+
+    #footer-text {
+        font-size: 0.6rem;
+    }
+}
